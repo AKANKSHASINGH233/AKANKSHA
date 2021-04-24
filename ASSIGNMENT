@@ -1,0 +1,32 @@
+#import matplotlib.pyplot as plt
+import seaborn as sns
+#Poisson Distribution
+from scipy.stats import poisson
+data_poisson  =  poisson.rvs(mu=3,  size=10000) data_poisson
+Out[4]:
+
+array([0, 3, 2,...,8, 2, 7])
+ax = sns.displot(data_poisson)
+
+ax.set(xlabel='Poisson  Distribution',  ylabel='Frequency')
+
+
+ax = sns.displot(data_poisson)
+
+ax.set(xlabel='Poisson  Distribution',  ylabel='Frequency')
+Out[5]:
+
+<seaborn.axisgrid.FacetGrid at 0x7f39c9dc8550>
+
+
+#Normal Distribution
+from scipy.stats import norm
+# generate random numbers from N(0,1)
+data_normal  =  norm.rvs(size=10000,loc=0,scale=1)
+
+ax = sns.displot(data_normal,
+bins=100, kde=True)
+ax.set(xlabel='Normal  Distribution',  ylabel='Frequency')
+Out[10]:
+
+<seaborn.axisgrid.FacetGrid at 0x7f39a6d1a410>
